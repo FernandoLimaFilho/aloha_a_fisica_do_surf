@@ -1,0 +1,669 @@
+\documentclass[book, 12pt, twoside, a5paper, english, brazil, sumario=tradicional, openany]{abntex2}
+%-------------------------------------
+\usepackage[top=2.54cm, bottom=2.54cm, left=1.91cm, right=1.91cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{cancel}
+\usepackage{glossaries}
+\usepackage{pslatex}
+\usepackage{mathtools}
+\usepackage{setspace}			
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}	
+\usepackage{indentfirst}		
+\usepackage{nomencl} 		
+\usepackage{wrapfig}	
+\usepackage[brazilian,hyperpageref]{backref}	\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}		
+\usepackage[printwatermark]{xwatermark}
+\usepackage[alf]{abntex2cite}	
+\usepackage{graphicx}			
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage[toc,page,header]{appendix}
+\usepackage{minitoc}
+\usepackage{colortbl} 
+\usepackage{comment}
+\usepackage{lettrine}
+\usepackage{calligra}
+\usepackage{yfonts,color}
+\usepackage{etoolbox,fancyhdr,xcolor}
+\usepackage[svgnames]{xcolor}
+\usepackage{erewhon}
+\usepackage{lipsum}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+\usepackage[explicit]{titlesec}
+\usepackage{incgraph,tikz}
+%-------------------------------------
+%\definecolor{brightcerulean}{rgb}{0.11, 0.67, 0.84}
+\definecolor{celestialblue}{rgb}{0.29, 0.59, 0.82}
+%-------------------------------------
+\everymath{\displaystyle}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=olivine,
+     filecolor=olivine,
+     citecolor =black!90, 
+     urlcolor=olivine,
+     }     
+\setlength{\columnsep}{5mm}
+\newenvironment{Figure} {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+\graphicspath{ {figures/} }
+\usepackage{array}
+\urlstyle{same}
+\setlength{\parindent}{0.6cm}
+\setlength{\parskip}{0cm} 
+\citebrackets()
+
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}}
+\usepackage[x11names]{xcolor} 
+\renewcommand{\LettrineFontHook}{\color{celestialblue}\GoudyInfamily{}}
+\LettrineTextFont{\itshape}
+\setcounter{DefaultLines}{3}%
+\newcommand{\headrulecolor}[1]{\patchcmd{\headrule}{\hrule}{\color{#1}\hrule}{}{}}
+\newcommand{\footrulecolor}[1]{\patchcmd{\footrule}{\hrule}{\color{#1}\hrule}{}{}}
+\fancyhf{}% Clear header/footer
+\fancyhead[RO]{\sffamily\nouppercase{\rightmark}}
+\fancyhead[LE]{\nouppercase\leftmark}
+\fancyhead[RE,LO]{{\color{celestialblue}{\thepage}}}
+\renewcommand{\headrulewidth}{2.2pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0pt}% Default \footrulewidth is 0pt
+\headrulecolor{celestialblue}
+\footrulecolor{celestialblue}
+\fancyfoot[C]{\empty}
+\pagestyle{fancy}
+
+\usepackage[explicit]{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\LARGE\rmfamily}
+  {\sffamily\flushright\fontsize{80}{0}\textbf{\textcolor{celestialblue}{{\Huge\chaptername}~\thechapter\vskip0pt\rule{\textwidth}{4pt}}}}{0pt}
+  {\flushleft\fontsize{70}{0}{#1}\vskip60pt}
+\titlespacing*{\chapter}
+  {0pt}{-40pt}{0pt}
+
+\makeglossaries
+
+\usepackage[pages=all]{background}
+
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=1,
+angle=0,
+contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{Fundo.png}
+  }%
+}
+
+\begin{document}
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{Capa1.png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{Capa2.png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{Dark Blue Modern Bubble in The Sky Book Cover (4).png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{Agradecimentos.png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+\addcontentsline{toc}{chapter}{Conheça o autor}
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{autor.png}
+
+\let\cleardoublepage\clearpage
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{Capa3.png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+
+\newpage
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{Apresentação.png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+
+\newpage
+
+{\large{{\textbf{{\color{celestialblue}{\tableofcontents}}}}}}
+
+\newpage
+\addcontentsline{toc}{chapter}{Apresentação}
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{apresentacao (2).png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{fisica_de_ondas (2).png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+
+\pagestyle{fancy}
+\addcontentsline{toc}{chapter}{Física de ondas}
+{\color{celestialblue}{\chapter{Ondas mecânicas}}}
+
+\vspace{-3cm}
+\lettrine{E}{} \ m um dia de domingo ensolarado frequentemente as praias do litoral brasileiro ficam amontoadas de pessoas. Algumas procuram somente um bom banho de Sol, um lugar espaçoso para a prática de esportes aeróbicos, ou até mesmo uma resenha com os amigos. No entanto, outras, como os surfistas, usam o mar como um laboratório científico. Eles testam novas manobras, analisam a força dos ventos, estudam a energia das ondas e a geologia da praia. Mas, acima de tudo, procuram as {\color{celestialblue}{ondas}} perfeitas. 
+
+\vspace{-1.8cm}
+\begin{center}
+    \includegraphics[scale=0.255]{Surfista.png} 
+\end{center}
+\vspace{-2.55cm}
+
+Os fenômenos \textit{ondulatórios} não estão presentes somente na praia. Convivemos com ondas. Por exemplo, o nosso sentido auditivo tem uma capacidade impressionante de captar {\color{celestialblue}{ondas sonoras}} mesmo de intensidade muito baixa. Na verdade, não é exagero afirmar que só existimos por causa do nosso sentido auditivo, uma vez que a capacidade de ouvir sons de animais predadores, que não são visíveis durante a noite, foi essencial para a sobrevivência de nossos ancestrais\nocite{1}.
+
+As ondas sonoras são exemplos de {\color{celestialblue}{ondas mecânicas}}, isto é, precisam de um \textit{meio} para se propagar. O próposito desse capítulo é fundamentar a base da física de ondas destinada ao estudo analítico do surf. Faremos uma descrição ondulatória, discutiremos os tipos de ondas mecânicas, o conceito de periodicidade, as equações que regem esse fenômeno da natureza e, por fim, estudaremos as ondas superficiais em líquidos. 
+
+\vspace{-0.9cm}
+
+{\color{celestialblue}{\section{Descrição ondulatória}}}
+
+\vspace{-0.3cm}
+
+Os físicos e matemáticos usam frequentemente conceitos estéticos para se referir às suas descobertas. Nesse sentido, a beleza da física é tentar descever os fenômenos da natureza com exatidão e precisão. No que tange a isso, os físicos proporam que uma curva senoidal é a representação gráfica de uma onda.
+
+Como no caso de ondas se propagando na superfície da água, os pontos mais altos dela são chamados de \textit{cristas} e os mais baixos de \textit{ventres}. A "altura" \ de uma onda, que é a distância entre a crista e o eixo horizontal, é chamada de {\color{celestialblue}{amplitude}} A. Em outras palavras, a amplitude é o máximo afastamento em relação ao equilíbrio, que é o eixo x\nocite{2}.
+
+Já o {\color{celestialblue}{comprimento de onda}} $\lambda$ de uma dada onda é a distância que vai de uma crista a outra adjacente. Ou, equivalentemente, ele é a distância entre duas parte idênticas e sucessivas de uma onda. A unidade de medida de $\lambda$ para ondas na praia é o metro. Assim, podemos dizer, por exemplo, "Ondas de mais de 2 metros de altura podem atingir litoral pernambucano.".
+
+\vspace{-0.5cm}
+\begin{center}
+    \includegraphics[scale=0.255]{sinoidal.png} 
+\end{center}
+\vspace{-1.2cm}
+
+Além do comprimento de onda, o que permite definir o conceito de {\color{celestialblue}{rapidez da onda}} é o que chamamos de {\color{celestialblue}{frequência}} f. Ela pode ser colocada como a taxa de repetição da oscilação da onda. A unidade de medida de frequência no SI (Sistema Internacional de Unidades) é chamada de {\color{celestialblue}{hertz}}\footnote{Nome dado em homenagem ao físico alemão Heinrich Hertz, que demonstrou a existência das ondas de rádio, em 1886.}. Nesse sentido, uma oscilação ou vibração por segundo é 1 hertz, duas oscilações por segundo equivalem a 2 hertz e assim por diante.
+
+O {\color{celestialblue}{período}} de uma oscilação completa é a duração de tempo que a onda leva para repetir seu padrão. Por isso, a frequência e o período são o inverso um do outro.
+
+\vspace{-0.2cm}
+
+\begin{equation}
+    \text{Frequência} = \dfrac{1}{\text{Período}} \iff \text{Período} = \dfrac{1}{\text{Frequência}}
+\end{equation}
+
+\vspace{-0.9cm}
+
+{\color{celestialblue}{\section{Movimento das ondas}}}
+
+\vspace{-0.3cm}
+
+A maioria das informações que recebemos são transmitidas por algum tipo de onda. Por exemplo, é pelo {\color{celestialblue}{movimento ondulatório}} que o som chega aos nossos ouvidos e a luz, uma onda eletromagnética\footnote{As ondas eletromagnéticas são aquelas capazes de se propagar no vácuo e formadas pela combinação dos campos elétrico e magnético.}, chega aos nossos olhos. O fato é que todos os tipos de ondas tem um princípio de movimento em comum, que pode ser escrito como:
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tcolorbox}[colback=white!91!brown, width = 0.8\linewidth , colframe = celestialblue, title=\centering{\color{white}{\textsc{Princípio da energia das ondas}}}]
+\vspace{0cm}
+
+{\color{celestialblue}{\textbf{Pelo \textit{movimento ondulatório}, a energia é transmitida de um ponto a outro sem que ocorra transporte de matéria.}}}
+
+\end{tcolorbox}
+\end{center}
+
+\vspace{-0.1cm}
+
+O exemplo mais intuitivo de um movimento ondulatório acontece quando jogamos uma pedra em um lago. Se ele está completamente parado e deixamos cair a pedra, as ondas se propagam para fora em círculos que se expandem. Isso nos faz pensar que é a água que está se deslocando na direção de propagação da onda, mas, na verdade, não. Ela realiza um movimento circular criando um aspecto de expansão que acompanha o fenômeno ondulatório.
+
+\vspace{-3cm}
+\begin{center}
+    \includegraphics[scale=0.285]{onda (2).png} 
+\end{center}
+\vspace{-3.5cm}
+
+As ondas dos surfistas possuem uma particularidade bastante interessante. Elas não são ondas, uma vez que há transporte de matéria, nesse caso, o surfista. O mesmo irá surfar transversalmente a ela, pois assim ele aproveita do movimento circular da água e é impulsionado para frente.
+
+\vspace{0.2cm}
+\begin{center}
+    \includegraphics[scale=0.285]{movcirc.png} 
+\end{center}
+\vspace{-0.6cm}
+
+Esse tipo de onda é chamado de {\color{celestialblue}{onda mista}}, a qual é uma mistura de oscilações verticais e horizontais. Na verdade, em princípio, existem dois tipos fundamentais de ondas, as {\color{celestialblue}{transversais}} e as {\color{celestialblue}{longitudinais}}. As transversais tem direção de oscilação perpendicular à direção de propagação, como ondas em uma corda. Já as longitudinais possuem uma direção de oscilação paralela à direção de propagação, como oscilações em uma mola.
+
+Assim, ondas na superfície da água são híbridos de ondas longitudinais e transversais: a água se move em trajetórias fechadas, para cima e para baixo, e de um lado para o outro. E como ocorre com outras ondas, o meio não se desloca na direção de propagação dela.
+
+\vspace{-0.7cm}
+
+{\color{celestialblue}{\section{A rapidez da onda}}}
+
+\vspace{-0.3cm}
+
+O comprimento de onda e a frequência são os conceitos que nos permitem definir a {\color{celestialblue}{rapidez de uma onda}}. Ela é dada por, 
+
+\vspace{-0.5cm}
+
+\begin{equation}
+    \text{Rapidez} = \text{Comprimento de onda} \times \text{Frequência} 
+\end{equation}
+
+Ou ainda, como o período de repetição do padrão de onda é o inverso da frequência de oscilação, temos,
+
+\begin{equation}
+    \text{Rapidez} = \dfrac{\text{Comprimento de onda}}{\text{Período}} 
+\end{equation}
+
+\vspace{0.1cm}
+
+Por exemplo, se o comprimento de onda for 10 metros, e o tempo entre a chegada de duas cristas sucessivas num ponto for 0.5 segundos, as ondas estarão se movendo 10 metros a cada 0.5 segundos, ou melhor, 20 metros a cada segundo. Essa relação vale para todos os tipos de ondas, sejam elas se propagando na superfície da água, no ar ou no vácuo, como as ondas eletromagnéticas.
+
+\vspace{-0.8cm}
+
+{\color{celestialblue}{\section{Energia do movimento ondulatório}}}
+
+\vspace{-0.3cm}
+
+Todo movimento ondulatório possui uma energia associada a ele e, como já vimos, uma onda transporta energia, mas não matéria. Isso nos leva a uma descoberta muito interessante no que tange às ondas na superfície da água.
+
+No mar, podemos considerar, aproximadamente, que a periodicidade das ondas é a mesma. Assim, como o período das ondas praticamente não muda, se a velocidade diminui, o comprimento de onda deve obrigatoriamente diminuir, o que pode ser visto na equação (1.2). Dessa forma, tendo o mesmo período, a mesma energia e o comprimento de onda menor, a consequência é a amplitude das ondas aumentar, o que faz com que elas tenham a tendência de quebrar quando vão se aproximando da costa.
+
+{\color{celestialblue}{\subsection{Energia e o surfista na onda}}}
+
+\vspace{-0.3cm}
+
+Na praia do Pecém, localizada em São Gonçalo do Amarante no Ceará, as ondas quebram rápido e com força, o que chamamos de \textit{ondas cavadas}. Nesse estilo, a velocidade $\text{v}_{\text{remo}}$ que um surfista deve remar para entrar na onda é mediana para baixa. No entanto, isso varia muito. Diferentes picos de surf, necessitam de diferentes velocidades de remo. 
+
+Para conseguir surfar, o surfista deve remar à frente da onda, com velocidade suficiente para ela não ultrapassa-lo. Além disso, ele deve usar o {\color{celestialblue}{pontencial gravitacional}} energético das ondas ao seu favor. O truque é obter velocidade suficiente na remada para a prancha começar a descer enquanto a onda viaja e quebra aos poucos.
+
+Nesse sentido, se m é a massa do surfista, $\text{v}_{\text{remo}}$ a velocidade de remada, h a altura da onda e g a aceleração da gravidade, nós podemos definir a energia mecânica E do surfista na base da onda, depois de ter dropado-a. Por meio do \textit{teorema de conservação de energia mecânica}\footnote{Princípio da Física que garante que, na ausência de forças dissipativas, como o atrito, a quantidade total de energia de um sistema nunca se altera.}, 
+
+\vspace{-0.2cm}
+
+\begin{equation}
+    \text{E}_{\text{Mecânica}} = \dfrac{\text{m} \cdot \text{v}_{\text{remo}}^{2}}{2} + \text{mgh}
+\end{equation}
+
+Se admitirmos que a altura da onda na base é nula, temos que a velocidade v do surfista é:
+
+\vspace{-0.2cm}
+
+\begin{equation}
+    \text{v}_{\text{Surfista}} = \sqrt{\text{v}_\text{remo}^{2} + \text{2gh}}
+\end{equation}
+
+Assim, v depende explicitamente do quanto o surfista vai remar e da altura da onda.
+
+Ainda em São Gonçalo do Amarente, na Taíba, temos um oásis do surf cearense. Lá, a velocidade de remada depende do período do ano, mas normalmente ela é intermediária, mas com esforço. Apesar disso, a onda é praticamente perfeita, não muito cavada, mas com altura e relevo que fazem o surfista literalmente flutuar sobre as águas. 
+
+{\color{celestialblue}{\subsection{Ondas e sustentabilidade}}}
+
+\vspace{-0.3cm}
+
+Além disso, a energia das ondas vem renovando o setor de energias renováveis. Gerada por meio da movimentação das ondas na água, a {\color{celestialblue}{energia ondomotriz}} é uma fonte de energia alternativa, limpa e renovável para a geração de energia elétrica, mas que ainda é pouco explorada no mundo.
+
+No Brasil, em 2012, foi instalado um projeto piloto de energia de ondas, a Usina do \textit{Porto do Pecém}\footnote{O Porto do Pecém é um terminal portuário da costa do Nordeste brasileiro, estilo "OFF SHORE" \ localizado em um acidente geográfico denominado "Ponta do Pecém".}, localizada no Ceará. O projeto que nasceu com uma parceria dos pesquisadores da Coordenação dos Programas de Pós-Graduação de Engenharia (COPPE), da Universidade Federal do Rio de Janeiro (UFRJ), e conta com o apoio do Governo do Estado do Ceará.
+
+O sistema da Usina do Porto do Pecém é composto por flutuadores, braços mecânicos e bombas conectadas a um circuito de água doce. Na ponta de cada um dos braços mecânicos há uma boia circular que sobe e desce de acordo com o movimento das ondas, acionando as bombas hidráulicas.
+
+As bombas fazem com que a água doce contida em um circuito fechado, circule em um local de alta pressão. Essa água sob pressão movimenta uma turbina, que aciona um gerador e produz energia elétrica.
+
+Ademais, talvez a maior aplicação das ondas na sustentabilidade seja por meio da {\color{celestialblue}{energia solar}}. O funcionamento da energia solar acontece da seguinte maneira: os módulos fotovoltaicos captam a luz do sol e produzem a energia. Essa é transportado até o inversor solar que irá converter a energia gerada pelo sistema para as características da rede elétrica.
+
+\vspace{0.4cm}
+\begin{center}
+    \includegraphics[scale=0.35]{sol (3).png} 
+\end{center}
+\vspace{-0.6cm}
+
+\vspace{-0.8cm}
+
+{\color{celestialblue}{\section{Ondas superfíciais em líquidos}}}
+
+\vspace{-0.3cm}
+
+Em geral, a velocidade de uma onda superficial em um líquido depende de sua natureza, da frequência da onda e da profundidade do líquido. Aqui, iremos descrever o que ocorre com a água em alguns casos.
+
+Caso a profundidade seja menor que a metade do comprimento de onda, a influência da frequência será desprezível e, nós temos, 
+
+\vspace{-0.3cm}
+
+\begin{equation}
+    \text{Rapidez} = \sqrt{\text{Gravidade} \times \text{Profundidade}} 
+\end{equation}
+
+\vspace{0.1cm}
+
+Essa é a velocidade das ondas já bem na beirada da praia. Para o mar profundo, a expressão é um pouco mais complicada, e é dada por, 
+
+\vspace{-0.3cm}
+
+\begin{equation}
+    \text{Rapidez} = \sqrt{\dfrac{\text{Gravidade} \times \text{Comprimento de onda}}{2\pi}}
+\end{equation}
+
+\vspace{0.1cm}
+
+A condição de mar profundo é relativa ao próprio comprimento de onda. A expressão (1.7) é válida
+se a profundidade é maior do que a metade do comprimento de onda.
+
+{\color{celestialblue}{\subsection{Ondas gigantes e tsunamis}}}
+
+\vspace{-0.3cm}
+
+Todos já ouvimos falar do evento sismológico que ocorreu no Japão em 2011. O sismo provocou alertas de {\color{celestialblue}{tsunâmi}} e evacuações na linha costeira japonesa do Pacífico e em pelo menos 20 países, incluindo toda a costa do Pacífico da América do Norte e América do Sul. Provocou também ondas de tsunâmi de mais de 10 metros de altura, que atingiram o Japão e diversos outros países. No Japão, as ondas percorreram mais de 10 km de terra.
+
+Tsunamis podem ser formadas por movimentos da crosta terrestre, tal como maremotos, deslizamentos, vulcões, ou ainda por quedas de blocos de geleiras. Geralmente apresentam grande comprimento e pequena altura. Por exemplo,
+podem ter 200 km de comprimento e 1 metro de altura.
+
+É óbvio que um tsunami é uma {\color{celestialblue}{onda gigante}}, mas em termos de altura, ele não é muita coisa. Ondas gigantes podem ser formadas quando ventos fortes batem contra
+correntes oceânicas, quando ondas formadas em diferentes tempestades juntam suas forças ou quando o {\color{celestialblue}{swell}} interage de modo singular com um fundo oceânico particular. 
+
+Nazaré, por exemplo, que tem as maiores ondas do mundo, recebe as ondulações gigantes geradas nas tempestades do oceano Atlântico, a centenas de quilômetros dali. O que faz com que essas ondas sejam muito maiores na região do que em outros lugares da costa portuguesa é a presença de um cânion submerso, também chamado de canhão – o famoso \textit{Canhão da Nazaré}. 
+
+Segundo o geólogo Lucca Cunha, os cânions são formações geomorfológicas normalmente associadas à erosão da terra provocada por um rio. Em Nazaré, a origem pode ser tectônica, ou seja, a fenda se abriu por algum tremor de terra há milhões de anos.
+
+Em teor de trajédia, as ondas são tão gigantescas que os surfistas mais aventureiros correm risco de vida. A exemplo de Márcio Freire, que com 47 anos morreu no dia 5 de janeiro de 2023 ao cair de um dos paredões de água da praia do Norte, em Nazaré (Portugal). A morte foi confirmada pela Autoridade Marítima Nacional de Portugal.
+
+{\color{celestialblue}{\subsubsection{Geologia e ondas}}}
+
+\vspace{-0.5cm}
+
+Em Nazaré foram surfadas as maiores ondas do mundo. O recorde oficial é do brasileiro Rodrigo Coxa, que surfou uma onda gigante de 24.38 metros, em novembro de 2017. Além de Nazaré, existem outros lugares famosos por possuírem ondas grandes, como o vilarejo de Teahupo'o, no Taiti.
+
+A {\color{celestialblue}{geologia}} é o fator principal em comum para que as ondas desses lugares tenham tais características. Por exemplo, As ondas em Teahupo'o são de um tipo apelidado pelos cientistas de "surto". Não são as maiores do mundo, atingindo um auge de 9.1 m, mas são extremamente volumosas, formadas também pelo encontro de águas profundas com uma costa rasa.
+
+O Taiti é uma ilha vulcânica e seus recifes de coral criam um obstáculo bem íngreme para frear a onda, fazendo com que a parte superior ultrapasse a anterior. Isso deveria resultar em ondas grandes e assimétricas, mas a geologia de Teahupo'o dá origem a um efeito único: a água doce descendo das montanhas vizinhas cria canais no fundo do oceano que previnem a formação de corais. Esses canais criam ondas "limpas" e rápidas ao canalizar a água da beira para o fundo.
+
+{\color{celestialblue}{\subsection{Swell}}}
+
+\vspace{-0.3cm}
+
+A maioria dos surfista algum dia já escutou frases do tipo: "O swell entrou e o mar está bombando!", normalmente, quando a maré enche, ou seja, quando as ondas aumentam de altura nos picos de surf, os surfistas tendem a classificar isso como um {\color{celestialblue}{swell}}, mas nem sempre isso é verdade.
+
+Em definição, elas são ondas que se formaram em tempestades oceânicas bem longe da praia, elas chegam a viajar milhares de quilômetros no meio do oceano, se distanciando muito das áreas tempestuosas onde foram criadas, e chegam limpas e perfeitas no pico de surf. Estas são o verdadeiro sonho de todo surfista. As ondas de swell são reconhecidas por serem "alinhadas", chegarem em séries, e terem uma direção bem definida, praticamente igual para todas elas, exatamente como as ondas da piscina. Por causa dessas características, elas são as melhores ondas para serem surfadas.
+
+\newpage
+
+\incgraph[documentpaper,
+  overlay={\node[red] at (page.center) {};}][width=\paperwidth,height=\paperheight]{HIDRO.png}
+
+\let\cleardoublepage\clearpage
+
+\newpage
+\addcontentsline{toc}{chapter}{Mecânica dos fluidos}
+{\color{celestialblue}{\chapter{A física dos fluidos}}}
+
+\vspace{-3cm}
+\lettrine{E}{} \ xistem praias inapropriadas para a prática do surf. Por exemplo, em Canoa Quebrada, no litoral cearense, o mar é calmo como uma piscina, impossibilitando, assim, a prática do esporte. Esse é só mais um exemplo da confirmação de que a onda e a geologia do local formam o quadro da arte de surfar, já o surfista e a prancha integram a tinta e o pincel. O objetivo desse capítulo é descrever fisicamente as interações desses dois últimos componentes com a água, o principal {\color{celestialblue}{fluido}} do nosso planeta. 
+
+\vspace{0.5cm}
+\begin{center}
+    \includegraphics[scale=0.250]{arte.png} 
+\end{center}
+\vspace{-0.13cm}
+
+Para se ter uma ideia, uma grande parcela da massa dos seres vivos é puramente água. Nos seres humanos, tal substância
+constitui 70$\%$ do nosso corpo; as porcentagens variam nos tecidos, sendo, por exemplo, 20$\%$ para
+o tecido ósseo e 85$\%$ no cérebro. No entanto, a quantidade de água no nosso corpo diminui com a a idade, sendo maior nas células embrionárias.
+
+Além disso, cerca de 70$\%$ da superfície terrestre é formada de água. Daí, enquanto 97$\%$ da água da Terra é salgada e está nos aceanos e nos mares; dos 3$\%$ restantes 2.2$\%$ estão na forma de gelo, nos polos Norte e Sul; 0.6$\%$ dela está embaixo da camada superficial do solo; 0.1$\%$ está na atmosfera; e somente 0.1$\%$ dela está disponível nos rios e lagos do planeta.
+
+\vspace{-0.8cm}
+
+{\color{celestialblue}{\section{Hidrostática}}}
+
+\vspace{-0.3cm}
+
+A {\color{celestialblue}{estática dos fluidos}} ou {\color{celestialblue}{Hidrostática}} é a parte da física que estuda os fluidos em equilíbrio. De um forma muito simplificada, os fluidos constituem os líquidos e gases. Por motivos de focar nos objetivos do capítulo, daremos mais ênfase ao equilíbrio dos líquidos.
+
+{\color{celestialblue}{\subsection{Conceito de pressão}}}
+
+\vspace{-0.3cm}
+
+Uma dificuldade que todo surfista passa quando vai ao mar é de enfrentar a \textit{Zona de Rebentação}. Ela é a zona do litoral afetada pelo movimento de avanço e recuo das águas imposto pela ondulação. Em outras palavras, zona de rebentação é a área onde as ondas estão quebrando.
+
+Para passar dessa zona, os surfista devem furar algumas ondas. Eles fazem isso enterrando o "bico" \ da prancha na água um pouco antes da onda passar e, assim, sai do outro lado dela. Tal fato é possível porque essa área da prancha é a que exerce menor {\color{celestialblue}{pressão}} sobre água.
+
+\vspace{0.5cm}
+\begin{center}
+    \includegraphics[scale=0.31]{pressao.png} 
+\end{center}
+\vspace{-0.13cm}
+
+Os físicos chamam de {\color{celestialblue}{pressão}} a grandeza dada pela relação entre a intensidade da força que atua perpendicularmente e a área em que ela se distribui\nocite{3}. Por exemplo, a pressão que uma surfista exerce sobre sua prancha é dada pela relação entre seu peso e a área da prancha.
+
+\vspace{-0.2cm}
+
+\begin{equation}
+    \text{Pressão} = \dfrac{\text{Peso da surfista}}{\text{Área da prancha}}
+\end{equation}
+
+\begin{center}
+    \includegraphics[scale=0.31]{peso.png} 
+\end{center}
+\vspace{-0.13cm}
+
+De maneira geral, 
+
+\vspace{-0.2cm}
+
+\begin{equation}
+    \text{Pressão} = \dfrac{\text{Força}}{\text{Área}}
+\end{equation}
+
+Outro exemplo que envolve os conceitos de pressão é o do \textit{buggy}. Em várias praias do litoral brasileiro é tradicional o passeio com esse veículo. Ele apresenta banda de rodagem de largura maior que o normal (pneus tala larga). Devido à maior área de contato com o solo, a pressão exercida pelos pneus sobre a areia torna-se menor, dificultando o atolamento.
+
+\vspace{-0.44cm}
+
+{\color{celestialblue}{\subsection{Conceito de densidade}}}
+
+\vspace{-0.3cm}
+
+Os navios modernos são metálicos, basicamente construídos em aço. Por ser um material de alta {\color{celestialblue}{densidade}}, o aço afunda rapidamente na água quando tomado em porções maciças. No entanto, os navios flutuam na água porque, sendo dotados de descontinuidades internas (partes ocas), apresentam {\color{celestialblue}{densidade}} menor que a desse líquido.
+
+\vspace{0.5cm}
+\begin{center}
+    \includegraphics[scale=0.31]{Navio.png} 
+\end{center}
+\vspace{-0.13cm}
+
+Por definição, a densidade de um corpo é fornecida pelo quociente entre a sua massa e seu volume. Em linguagem matemática, nós podemos escrever, 
+
+\vspace{-0.2cm}
+
+\begin{equation}
+    \text{Densidade} = \dfrac{\text{Massa do corpo}}{\text{Volume do corpo}}
+\end{equation}
+
+Os conceitos de pressão e densidade fazem com que existam diferentes tamanhos e litragens\footnote{A litragem influência diretamente na flutuação da prancha, é a sua massa total. É dada a partir do conjunto de todas as medidas da prancha.} de pranchas. Elas variam de acordo com o nível de surf, do tamanho e do tipo de onda. Os iniciantes geralmente precisam de pranchas maiores e mais largas, pela falta de prática, quanto mais área mais fácil de se equilibrar e dropar a onda. Já os surfistas a partir do nível intermediário, tendem a diminuir o tamanho das pranchas, dando preferência para uma prancha mais leves e manobráveis.
+
+\vspace{-0.44cm}
+
+{\color{celestialblue}{\subsection{Pressão em um líquido}}}
+
+\vspace{-0.3cm}
+
+Quando estamos debaixo d'água, sentimos uma leve pressão nos nossos ouvidos. Se a profundidade em que estamos é relativamente alta, essa pressão é grande e chega a incomodar. O fato é que quanto mais fundo vamos, mais água tem "em cima da nossa cabeça" \ e, portanto, maior o peso sobre ela.
+
+A pressão P que sentimos em baixo d'água quando estamos a uma profundidade h é a soma da pressão atmosférica(Peso que o ar exerce sobre a superfície terrestre.) com a pressão da massa de água acima de nós.
+
+\vspace{0.5cm}
+\begin{center}
+    \includegraphics[scale=0.31]{Pre.png} 
+\end{center}
+\vspace{-0.13cm}
+
+Assim, sendo m essa massa, d a densidade da água, g a aceleração da gravidade e P$_{\text{atm}}$ a pressão atmosférica, nós temos,
+
+\begin{center}
+    $\text{P} = \text{P}_{\text{atm}} + \dfrac{\text{mg}}{\text{A}}$
+\end{center}
+
+Pela fórmula da densidade, 
+
+\begin{center}
+    $\text{Densidade} =  \dfrac{\text{Massa}}{\text{Volume}} \ \therefore \ \text{d} = \dfrac{\text{m}}{\text{A} \cdot \text{h}} \ \therefore \ \text{m} = \text{d} \cdot \text{Ah}$
+\end{center}
+
+Daí, 
+
+\begin{center}
+    $\text{P} = \text{P}_{\text{atm}} + \dfrac{\text{dh} \cdot \cancel{\text{A}} \cdot  \text{g}}{\cancel{\text{A}}} \ \therefore \ \text{P} = \text{P}_{\text{atm}} + \text{dgh}$
+\end{center}
+
+\begin{equation}
+    \text{P} = \text{P}_{\text{atm}} + \text{dgh}
+\end{equation}
+
+A expressão anterior exprime o \textit{Teorema de Stevin}. A pressão em um ponto situado a uma profundidade h no interior de um líquido em equilíbrio é dada pela pressão exercida pelo ar somada à pressão da coluna de líquido de altura h.
+
+\vspace{-0.44cm}
+
+{\color{celestialblue}{\subsection{Empuxo}}}
+
+\vspace{-0.3cm}
+
+Quando estamos mergulhados em uma piscina ou no mar, nos sentimos mais leves, como se o líquido estivesse exercendo uma força sobre o nosso corpo, empurrando-o para cima. Esse fato curioso parece ter sido primeiro observado pelo sábio grego Arquimedes de Siracusa. Ele colocou o nome dessa força de {\color{celestialblue}{Empuxo}}.
+
+\vspace{0.5cm}
+\begin{center}
+    \includegraphics[scale=0.31]{Empuxo (1).png} 
+\end{center}
+\vspace{-0.23cm}
+
+Dessa forma o peso aparante de uma pessoa mergulhada é dada por:
+
+\vspace{-0.3cm}
+
+\begin{equation}
+    \text{Peso aparente} = \text{Peso da pessoa} - \text{Empuxo}
+\end{equation}
+
+O empuxo também pode ter uma definição em termos da terceira lei de Newton, a de ação e reação. Nesse caso, ela seria uma força de reação.
+
+O empuxo descrito dessa forma tem aplicações importantes no surf. Um dos componentes principais da prancha é a \textit{quilha}. Em síntase, as quilhas são responsáveis pela propulsão e estabilidade da prancha. Elas que vão auxiliar a borda a conseguir transferir sua força para a água e empurrar a prancha pra frente ganhando velocidade.
+
+Atualmente, no mercado, existem as monoquilhas, biquilhas, triquilhas e quadriquilhas. As pranchas com 3 quilhas são as queridinhas entre os surfistas amadores e profissionais. São elas que possuem maior velocidade, precisão, estabilidade em ondas grandes. As pranchas com esse número de quilhas costuma ser mais flexível para realizar as manobras do que as outras. Para quem surfa ondas consideradas difíceis e de forma mais vertical, recomenda-se a triquilhas.
+
+\vspace{0.5cm}
+\begin{center}
+    \includegraphics[scale=0.21]{quilha.png} 
+\end{center}
+\vspace{-0.23cm}
+
+\vspace{-0.8cm}
+
+{\color{celestialblue}{\section{A prancha na água}}}
+
+\vspace{-0.3cm}
+
+Na física, costumamos simplificar certos problemas para que possamos obter alguma conclusão sobre o que está se tentando resolver. Por exemplo, suponha que um surfista já dropou e está surfando uma onda. Em um determinado momento t, sua velocidade era v e sua inclinação em relação à horizontal era $\theta$. A pessoa que surfa tem uma massa m e está sujeita ao seu peso e a uma força F de reação da água. Vamos encontrar sua velocidade em termos do ângulo $\theta$ e período T da onda.
+
+\vspace{0.5cm}
+\begin{center}
+    \includegraphics[scale=0.33]{Surfs_wave.png} 
+\end{center}
+\vspace{-0.23cm}
+
+Por \textit{terceira lei de Newton}, nós temos, 
+
+\begin{center}
+    $\text{F}_{\text{Resultante}} = \text{Massa} \cdot \text{Aceleração}$
+\end{center}
+
+A força resultante na direção da velocidade do surfista é $\text{F} \cdot \sin(\theta)$. Daí, 
+
+\begin{center}
+    $\text{F} \cdot \sin(\theta) = \text{m} \cdot \dfrac{\Delta\text{v}}{\Delta\text{t}} \ \therefore \  \text{F}\sin(\theta) \cdot \Delta\text{t} = \text{m} \cdot \Delta\text{v}$
+\end{center}
+
+Por trigonometria básica, descobre-se que $\text{F} = \dfrac{\text{mg}}{\cos(\theta)}$. Portanto, 
+
+\begin{center}
+    $  \cancel{\text{m}} \cdot \text{g}\tan(\theta) \cdot \Delta\text{t} = \cancel{\text{m}} \cdot \Delta\text{v} \ \therefore \ \Delta\text{v} = \text{g}\tan(\theta) \cdot \Delta\text{t}$
+\end{center}
+
+\begin{center}
+    $ \Delta\text{v} = \text{g}\tan(\theta) \cdot \Delta\text{t}$
+\end{center}
+
+Se $\Delta\text{t}$ é uma fração f do período T da onda, nós temos, 
+
+\begin{equation}
+     \Delta\text{v} = \text{g}\tan(\theta) \cdot \text{f} \text{T}
+\end{equation}
+
+Note uma coisa muito interessante, quanto mais inclinada é a onda, ou seja, quanto maior for o ângulo $\theta$ no intervalo de 0° a 90°, maior será a velocidade do surfista. Ondas mais inclinadas no surf são chamadas de \textit{cavadas}. Elas quebram mais rápido e com mais força, portanto exigem um drop veloz e seguro, não sendo a melhor onda para iniciantes.
+
+Essa solução admiti que a aceleração do surfista é constante, o que é uma grande simplificação. No entanto, para inclinações pequenas, ela funciona muito bem. O fato é que os diferentes componentes da prancha e suas interações com a água geram vários tipos de equações, dependências e vínculos. Assim, a realidade é bem mais complexa do que a física vê.
+
+\vspace{-0.44cm}
+
+{\color{celestialblue}{\subsection{O designer da prancha}}}
+
+\vspace{-0.3cm}
+
+Como já vimos, um exemplo dessas complexidades a mais é a inserção das {\color{celestialblue}{quilhas}}, as quais são responsáveis pelo ganho de velocidade e estabilidade da prancha. Outra parte importante da prancha que já falamos foi o {\color{celestialblue}{bico}}. Ele é a parte mais estreita de uma prancha e o extremo que fica mais próximo a  cabeça do surfista quando está remando. Pode ser feito de vários tipos, o que vai influenciar no tempo de entrada na onda.
+
+{\color{celestialblue}{\subsubsection{Arquitetura básica}}}
+
+\vspace{-0.3cm}
+
+Outra estrutura muito importante da prancha é o {\color{celestialblue}{deck}}, que é onde o surfista fica. Em adição, para haver mais aderência dos seus pés com o deck, eles passam parafina\footnote{É um produto derivado do petróleo, ela é muito utilizada na fabricação de velas.} onde ficam.
+
+\begin{center}
+    \includegraphics[scale=0.31]{Estrutura.png} 
+\end{center}
+\vspace{-0.23cm}
+
+No próprio deck, podemos ver outro componente da prancha. A {\color{celestialblue}{longarina}}. Ela é a linha de madeira que acompanha o centro da prancha, servindo para acrescentar força e rigidez. Tal linha também pode ser vista no {\color{celestialblue}{fundo}}, que é a área de maior contato com a água, responsável por fazer a água fluir, influenciando na velocidade e estabilidade da prancha. 
+
+A parte oposta ao bico é a {\color{celestialblue}{rabeta}}, o rabo da prancha. O tipo da rabeta influencia bastante no comportamento de uma prancha na parede da onda, se vai ficar mais solta ou presa. Essa estrutura trabalha com o seguinte princípio: Superfícies mais arredondadas seguram mais a água, enquanto cantos permitem que a água passe mais facilmente. Assim, existem diferentes tipos de rabetas, umas que deixam a prancha mais estável, como a \textit{SQUASH} e \textit{ROUND}, e outras que a fazem ficar mais "nervosa", como a \textit{SWALLOW}.
+
+Por fim, mas não menos importante, temos a {\color{celestialblue}{borda}}. Ela é responsável por um contato importante da prancha com a água, o que influencia no fluxo e aderência na onda. Também responsável pela distribuição de volume.
+
+\vspace{-0.5cm}
+
+{\color{celestialblue}{\subsubsection{Tipo ideal de prancha}}}
+
+\vspace{-0.3cm}
+
+Não existe um tipo de prancha perfeita, cada uma vai ter seu diferencial de acordo com seus componentes. Por exemplo, um Longboard ou Pranchão é um tipo de prancha maior e mais larga, tornando o surf mais suave. Dependendo do modelo, algumas pranchas permitem manobras e outras um surf mais clássico, com caminhadas até o bico. São as pranchas mais fáceis para entrar nas ondas.
+
+Outro exemplo são os Funboards, as pranchas mais recomendadas para iniciantes no Surf. Isso porque elas possuem bastante área distribuida por toda sua extensão, o que ajuda na remada para entrar nas ondas e também na estabilidade quando estiver na parede.
+
+Dessa forma, percebe-se não existe uma prancha perfeita. Existe a ideal para cada forma de surfar.
+
+\newpage
+
+\pagestyle{empty}
+
+{\large{{\textbf{{\color{black}{\bibliography{Referencias}}}}}}}
+
+
+\end{document}
+
+
